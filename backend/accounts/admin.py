@@ -1,2 +1,3 @@
-# PURPOSE: Django Admin configuration for users.
-# No implementation yet. We will build this file when its lesson/feature begins.
+from django.contrib import admin
+
+# Register your models here.
