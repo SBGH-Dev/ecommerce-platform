@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Our apps
     'accounts',
+    'store'
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
