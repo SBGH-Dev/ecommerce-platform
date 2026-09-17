@@ -1,2 +1,6 @@
-# PURPOSE: Catalog management in Django Admin.
-# No implementation yet. We will build this file when its lesson/feature begins.
+from django.contrib import admin
+
+from .models import Category, Product
+
+admin.site.register(Category)
+admin.site.register(Product)
