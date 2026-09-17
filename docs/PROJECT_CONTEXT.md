@@ -69,8 +69,22 @@ Current fields:
 - phone
 - currency
 - address
+- description
+- whatsapp
+- primary_color
+- secondary_color
+- tax_enabled
+- tax_percentage
+- delivery_enabled
+- minimum_order_amount
+- created_at
+- updated_at
 
 Default currency is SAR.
+
+The model prevents creation of more than one StoreSettings record while allowing the existing record to be updated.
+
+Logo, favicon, and social URLs are intentionally postponed.
 
 ## Current configuration
 
@@ -113,6 +127,18 @@ implemented because Django's standard email configuration uses EMAIL_BACKEND.
 
 1. [x] Project foundation
 2. [x] Initial StoreSettings
+
+- [x] StoreSettings description added
+- [x] Store contact/WhatsApp settings added
+- [x] Store primary and secondary colors added
+- [x] Store tax settings added
+- [x] Store delivery/minimum-order settings added
+- [x] StoreSettings timestamps added
+- [x] StoreSettings restricted to one record
+- [x] StoreSettings migrations applied successfully
+- [x] CustomUserManager validates required email
+- [x] Superuser creation validates staff/superuser flags
+
 3. [ ] Category + Product
 4. [ ] Improve Django Admin for catalog management
 5. [ ] Basic catalog API

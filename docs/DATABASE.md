@@ -11,6 +11,7 @@ Legend:
 ### [~] User
 
 Purpose:
+
 Customer and merchant authentication.
 
 Current implementation:
@@ -27,26 +28,35 @@ Current implementation:
 - is_staff — inherited
 - is_superuser — inherited
 - last_login — inherited
+- date_joined — inherited creation timestamp
 
 Planned but not implemented:
 
-- is_phone_verified
-- created_at
-- updated_at
+- is_phone_verified — revisit during phone OTP implementation
+- updated_at — add later only if needed
 
 Authentication:
 
 - username removed
 - USERNAME_FIELD = "email"
 - CustomUserManager used
+- create_user requires an email
+- create_superuser enforces is_staff=True and is_superuser=True
+
+Registration rule for later API:
+
+Customer self-registration will require:
+first_name, last_name, phone, email, and password.
+This will be enforced by the registration serializer.
 
 ---
 
 ## store
 
-### [~] StoreSettings
+### [x] StoreSettings
 
 Purpose:
+
 Configuration for the single store represented by this deployment/database.
 
 Current implementation:
@@ -57,16 +67,10 @@ Current implementation:
 - phone
 - currency — default SAR
 - address
-
-Planned additions:
-
 - description
-- logo
-- favicon
+- whatsapp
 - primary_color
 - secondary_color
-- whatsapp
-- social URLs
 - tax_enabled
 - tax_percentage
 - delivery_enabled
@@ -74,8 +78,18 @@ Planned additions:
 - created_at
 - updated_at
 
+Planned for later:
+
+- logo
+- favicon
+- social URLs
+
 Important rule:
+
 One deployment = one store.
+
+Only one StoreSettings record may be created.
+The model's save() method prevents creation of a second record while still allowing the existing record to be updated.
 
 ---
 
