@@ -95,7 +95,7 @@ The model's save() method prevents creation of a second record while still allow
 
 ## catalog
 
-### [ ] Category
+### [X] Category
 
 Planned:
 
@@ -109,7 +109,7 @@ Planned:
 - created_at
 - updated_at
 
-### [ ] Product
+### [x] Product
 
 Planned:
 

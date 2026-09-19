@@ -138,8 +138,14 @@ implemented because Django's standard email configuration uses EMAIL_BACKEND.
 - [x] StoreSettings migrations applied successfully
 - [x] CustomUserManager validates required email
 - [x] Superuser creation validates staff/superuser flags
+- [x] Catalog app created
+- [x] Category model created and migrated
+- [x] Product model created and migrated
+- [x] Product → Category ForeignKey implemented
+- [x] Category and Product registered in Django Admin
+- [x] Category and Product creation tested successfully
 
-3. [ ] Category + Product
+3. [x] Category + Product
 4. [ ] Improve Django Admin for catalog management
 5. [ ] Basic catalog API
 6. [ ] Next.js storefront
