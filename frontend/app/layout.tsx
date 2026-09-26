@@ -1,2 +1,13 @@
-/* PURPOSE: Root website layout: providers, shared page shell, header/footer.
-   No implementation yet. We will build this when its feature begins. */
+import "./globals.css";
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}

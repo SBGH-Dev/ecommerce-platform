@@ -1,2 +1,12 @@
-/* PURPOSE: TypeScript shapes for categories, products, options and variants.
-   No implementation yet. We will build this when its feature begins. */
+export type Product = {
+  id: number;
+  name: string;
+  slug: string;
+  category_name: string;
+  category: number;
+  description: string;
+  base_price: string;
+  sku: string;
+  is_active: boolean;
+  is_featured: boolean;
+};
